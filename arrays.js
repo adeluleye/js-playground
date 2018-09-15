@@ -126,3 +126,28 @@ console.log(parts);
 const combineMsg = parts.join('-');
 
 console.log(combineMsg);
+
+// Sorting an array
+// Method1: using sort()
+const arrayToBeSorted = [3, 7, 5, 2, 3, 1];
+arrayToBeSorted.sort();
+
+console.log(arrayToBeSorted);
+
+// M2: using reverse()
+arrayToBeSorted.reverse();
+console.log(arrayToBeSorted);
+
+// Sorting Objects
+const myCourses = [{ id: 1, name: 'Node js' }, { id: 2, name: 'javascript' }];
+
+myCourses.sort((a, b) => {
+  const nameA = a.name.toLowerCase();
+  const nameB = b.name.toLowerCase();
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+
+console.log(myCourses);
