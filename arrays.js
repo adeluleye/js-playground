@@ -184,3 +184,9 @@ const objects = arrayToBeFiltered
   .filter(obj => obj.value > 1)
   .map(obj => obj.value);
 console.log(objects);
+
+// Reducing an array
+const sum = arrayToBeFiltered.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
+console.log(sum);
