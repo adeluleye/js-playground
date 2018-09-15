@@ -151,3 +151,15 @@ myCourses.sort((a, b) => {
 });
 
 console.log(myCourses);
+
+// Testing the Elements of an Array
+
+// 1. every() method: All elements of the array must conform to a given criteria
+const arrayToBeTested = [1, 2, -1, 3, 4];
+
+const allPositive = arrayToBeTested.every(value => value >= 0);
+console.log(allPositive); //=> false
+
+// 1. some() method: At least one elements of the array must conform to a given criteria
+const atLeastOne = arrayToBeTested.some(value => value >= 0);
+console.log(atLeastOne); // => true
