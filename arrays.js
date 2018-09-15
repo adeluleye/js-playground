@@ -108,5 +108,5 @@ for (i of arrayThree) console.log(i);
 
 arrayThree.forEach(number => console.log(number));
 
-// Log both number and the index
+// Log both number and the index using forEach()
 arrayThree.forEach((number, index) => console.log(number, index));
