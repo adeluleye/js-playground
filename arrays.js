@@ -163,3 +163,10 @@ console.log(allPositive); //=> false
 // 1. some() method: At least one elements of the array must conform to a given criteria
 const atLeastOne = arrayToBeTested.some(value => value >= 0);
 console.log(atLeastOne); // => true
+
+// Filtering an Array using filter() method
+const arrayToBeFiltered = [1, -1, -2, 3, 4, -6, 8, 9];
+
+const filteredArray = arrayToBeFiltered.filter(value => value >= 0);
+
+console.log(filteredArray);
