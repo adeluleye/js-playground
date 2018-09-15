@@ -110,3 +110,19 @@ arrayThree.forEach(number => console.log(number));
 
 // Log both number and the index using forEach()
 arrayThree.forEach((number, index) => console.log(number, index));
+
+// Joining Arrays
+const anArray = [1, 2, 3];
+const joined = anArray.join(',');
+
+console.log(joined);
+
+// Using the 'split' method on strings
+const message = 'This is a test message';
+const parts = message.split(' ');
+
+console.log(parts);
+
+const combineMsg = parts.join('-');
+
+console.log(combineMsg);
