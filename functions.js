@@ -89,7 +89,33 @@ const person2 = {
 try {
   person2.fullName = '';
 } catch (error) {
-  alert(error);
+  //alert(error);
 }
 
 console.log(person2);
+
+// Scope (Local vs Global scope)
+const message = 'hi';
+
+console.log(message);
+
+// VAlid
+function start() {
+  const message = 'hi';
+}
+function stop() {
+  const message = 'hi';
+}
+//Note: Avoid Global variables as much as you can, because local variables takes
+// precedence over Global variables
+
+// let vs var
+// var: it's scope is not limited to the block alone but limited to the function
+// i.e it's a function scoped variable
+
+// let: block scoped variable
+function start2() {
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+  }
+}
