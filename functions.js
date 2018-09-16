@@ -13,3 +13,20 @@ let run = function() {
 };
 
 run();
+
+// Arguments
+function sum(a, b) {
+  return a + b;
+}
+
+//Note: Every function in javascript has a special object called 'arguments'
+function sumDynamic() {
+  let total = 0;
+  for (let value of arguments) total += value;
+  return total;
+}
+
+console.log(sum(1, 2)); //=> 3
+console.log(sum(1)); //=> NaN
+console.log(sum()); //=> NaN
+console.log(sumDynamic(1, 2, 3, 4, 5, 6)); //=> 15
