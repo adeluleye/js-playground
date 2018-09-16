@@ -51,6 +51,8 @@ function interest(principal, rate = 3.5, years = 5) {
 //console.log(interest(10000, 3.5, 5));
 console.log(interest(10000));
 
+// getters => access properties in an object
+// setters => change (mutate)
 //Getters and Setters
 const person = {
   firstName: 'Abideen',
@@ -69,5 +71,25 @@ person.fullName = 'Jummy Aremu';
 
 console.log(person);
 
-// getters => access properties in an object
-// setters => change (mutate)
+// Error Handling
+// throw => exception
+const person2 = {
+  firstName: 'Abideen',
+  lastName: 'Adelu',
+  set fullName(value) {
+    if (typeof value != 'string') throw new Error('Value is not a string');
+
+    const parts = value.split(' ');
+    if (parts.length !== 2) throw new Error('Enter a first and last name');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
+};
+
+try {
+  person2.fullName = '';
+} catch (error) {
+  alert(error);
+}
+
+console.log(person2);
