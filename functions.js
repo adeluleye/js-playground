@@ -30,3 +30,13 @@ console.log(sum(1, 2)); //=> 3
 console.log(sum(1)); //=> NaN
 console.log(sum()); //=> NaN
 console.log(sumDynamic(1, 2, 3, 4, 5, 6)); //=> 15
+
+// Rest operator
+// Note: the Rest parameter must be the last parameter in a function, otherwise there will be an error
+function sumRestOperator(discount, ...prices) {
+  const total = prices.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  return total * (1 - discount);
+}
+console.log(sumRestOperator(0.1, 20, 30)); //=> 15
