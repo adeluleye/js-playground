@@ -40,3 +40,13 @@ function sumRestOperator(discount, ...prices) {
   return total * (1 - discount);
 }
 console.log(sumRestOperator(0.1, 20, 30)); //=> 15
+
+// Default Parameters: once you give a default value to a parameter, it should
+// either be the last parameter in the function or give the other following parameters
+// a default value as well
+function interest(principal, rate = 3.5, years = 5) {
+  return ((principal * rate) / 100) * years;
+}
+
+//console.log(interest(10000, 3.5, 5));
+console.log(interest(10000));
