@@ -119,3 +119,28 @@ function start2() {
     console.log(i);
   }
 }
+
+// The 'this' keyword
+const video = {
+  title: 'a',
+  tags: ['a', 'b', 'c'],
+  showTags() {
+    this.tags.forEach(tag => {
+      console.log(this.title, tag);
+    });
+  }
+};
+
+video.showTags();
+
+// Changing 'this' value
+
+function playVideo() {
+  console.log(this);
+}
+
+playVideo.call({ name: 'Abideen' }, 1, 2);
+playVideo.apply({ name: 'Abideen' }, [1, 2]);
+playVideo.bind({ name: 'Abideen' })();
+
+playVideo();
